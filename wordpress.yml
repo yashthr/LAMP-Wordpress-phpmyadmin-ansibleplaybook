@@ -1,0 +1,11 @@
+---
+- name: Installing Wordpress
+  become: True
+  hosts: all
+
+
+  tasks:
+   - name: Copying the Wordpress Module to /var/www/html
+     copy:
+      src: /home/ansadmin/playbooks/wordpress
+      dest: /var/www/html
